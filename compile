@@ -1,0 +1,3 @@
+cd $phoenix_dir 
+cd assets && yarn run build
+cd .. && mix "${phoenix_ex}.digest"
