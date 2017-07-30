@@ -7,6 +7,7 @@ import { CoreModule } from './core/core.module';
 import { HomepageModule } from './homepage/homepage.module';
 import { StaticModule } from './static/static.module';
 import { NavbarModule } from './navbar/navbar.module';
+import { AccountsModule } from './accounts/accounts.module';
 
 import { AppComponent } from './app.component';
 
@@ -18,7 +19,8 @@ import { AppComponent } from './app.component';
     AppRoutingModule,
     HomepageModule,
     NavbarModule,
-    StaticModule
+    StaticModule,
+    AccountsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
