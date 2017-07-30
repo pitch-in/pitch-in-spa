@@ -10,7 +10,7 @@ defmodule PitchInWeb.Router do
 
     get "/search", SearchController, :index
 
-    resources "/campaigns", CampaignController, only: [:index, :show, :create, :update] do
+    resources "/campaigns", CampaignController, only: [:index, :show, :create, :update]
     resources "/needs", AskController, only: [:index, :show, :create, :update]
     resources "/answers", AnswerController, only: [:index, :show, :create, :update]
 
