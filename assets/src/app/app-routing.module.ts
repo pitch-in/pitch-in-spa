@@ -7,6 +7,7 @@ import { FaqComponent } from './static/faq/faq.component';
 import { DonateThanksComponent } from './static/donate-thanks/doante-thanks.component';
 import { AboutUsComponent } from './static/about-us/about-us.component';
 import { LoginComponent } from './accounts/login/login.component';
+import { SignupComponent } from './accounts/signup/signup.component';
 
 const routes: Routes = [
   { path: '', redirectTo: '/homepage', pathMatch: 'full' },
@@ -15,7 +16,8 @@ const routes: Routes = [
   { path: 'donate-thanks', component: DonateThanksComponent },
   { path: 'faq', component: FaqComponent },
   { path: 'privacy-policy', component: PrivacyPolicyComponent },
-  { path: 'login', component: LoginComponent }
+  { path: 'login', component: LoginComponent },
+  { path: 'signup', component: SignupComponent }
 ];
 
 @NgModule({
