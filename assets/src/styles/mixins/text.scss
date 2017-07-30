@@ -1,0 +1,7 @@
+@mixin text-shadow-dark {
+  text-shadow: $down-shadow-dark;
+}
+
+@mixin text-shadow-light {
+  text-shadow: $down-shadow-light;
+}

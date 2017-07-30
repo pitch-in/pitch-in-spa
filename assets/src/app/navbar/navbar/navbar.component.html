@@ -1,0 +1,47 @@
+<nav class="navbar">
+  <div class="top-bar title" data-responsive-toggle="top-nav" data-hide-for="none">
+    <div class="top-bar-left">
+      <ul class="horizontal menu">
+        <li>
+          <a class="logo" href="/">
+            <img src="/assets/img/shovels.svg" />
+            <h3 class="name">Pitch In</h3>
+          </a>
+        </li>
+
+        <li class="show-for-large" *ngIf="loggedIn">
+          <a routerLink="/search">Search Needs</a>
+        </li>
+        <li class="show-for-large" *ngIf="loggedIn">
+          <a routerLink="/campaigns">Manage Campaigns</a>
+        </li>
+        <li class="show-for-large" *ngIf="loggedIn">
+          <a routerLink="/referrals">Refer Friends</a>
+        </li>
+      </ul>
+    </div>
+    <div class="top-bar-right">
+      <ul class="vertical medium-horizontal menu">
+        <li class="show-for-large">
+          <a href="https://secure.actblue.com/contribute/page/pitch-in-app?refcode=website" title="Act Blue">Donate</a>
+        </li>
+        <li class="show-for-large" *ngIf="loggedIn">
+          <a routerLink="/profile">Profile</a>
+        </li>
+        <li class="show-for-large" *ngIf="loggedIn">
+          <a routerLink="/logout">Log Out</a>
+        </li>
+
+        <li class="show-for-large" *ngIf="!loggedIn">
+          <a routerLink="/login">Log In</a>
+        </li>
+        <li class="show-for-large" *ngIf="!loggedIn">
+          <a routerLink="/sign-up">Sign Up</a>
+        </li>
+        <li class="flex-center">
+          <button class="menu-icon" type="button" data-toggle="top-nav"></button>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>

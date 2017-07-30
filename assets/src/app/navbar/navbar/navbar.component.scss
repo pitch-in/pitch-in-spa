@@ -1,0 +1,125 @@
+@import 'variables/index';
+
+.navbar {
+  $link-color: $white;
+  $hover-color: darken($link-color, 20%);
+
+  height: $navbar-height;
+  z-index: 1;
+
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+
+  .top-bar {
+    &,
+    & ul {
+      background: $light-blue;
+    }
+
+    // Higher title bar.
+    &.title {
+      // Keep left/right spacing working at small sizes.
+      flex-wrap: nowrap;
+      height: $navbar-height;
+
+      .top-bar-left {
+        flex: 1 1 auto;
+      }
+      .top-bar-right {
+        flex: 0 1 auto;
+      }
+
+      &,
+      & ul {
+        background: $blue;
+      }
+    }
+  }
+
+  // Update menu-icon hover color.
+  // TODO: Is there a variable for this?
+  .menu-icon {
+    height: 18px;
+    margin-left: 16px;
+
+    &::after {
+      height: 0.25rem;
+
+      &:hover {
+        background: $hover-color;
+        box-shadow: 0 7px 0 $hover-color, 0 14px 0 $hover-color;
+      }
+    }
+  }
+
+  // li a to win specificity war.
+  .logo,
+  li a.logo {
+    align-items: center;
+  }
+
+  .logo {
+    // Don't take up extra space.
+    padding: 0 16px 0 0;
+
+    .name {
+      // Space between logo and name.
+      margin: 0 0 0 8px;
+      color: $link-color;
+    }
+
+    &:hover,
+    &:active {
+      background: transparent;
+      .name {
+        color: $hover-color;
+      }
+    }
+
+    a {
+      // No margins for child links.
+      margin-bottom: 0;
+    }
+
+    img {
+      $logo-height: 56px;
+      height: $logo-height;
+      width: $logo-height;
+      margin: 0;
+    }
+  }
+
+  .menu > li > a {
+    display: flex;
+  }
+
+  // Port over styles for links into forms for DELETE links.
+  .menu > li > form a {
+    display: flex;
+    flex-flow: row nowrap;
+    padding: 0.7rem 1rem;
+    line-height: 1;
+  }
+
+  a {
+    color: $link-color;
+
+    &:hover,
+    &:active {
+      background: $light-blue;
+    }
+  }
+
+  .submenu a {
+    &:hover,
+    &:active {
+      background: $blue;
+    }
+  }
+}
+
+.navbar__button {
+  margin-bottom: 0 !important;
+}

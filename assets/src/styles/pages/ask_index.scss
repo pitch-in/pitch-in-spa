@@ -1,0 +1,17 @@
+.ask-index {
+  width: 100%;
+
+  .search-summary-details {
+    background: $off-white;
+    border: 1px solid $black;
+
+    .need-text {
+      padding: 10px;
+    }
+  }
+  .search__toggle-button {
+    width: 40px;
+    flex-shrink: 0;
+    vertical-align: middle;
+  }
+}

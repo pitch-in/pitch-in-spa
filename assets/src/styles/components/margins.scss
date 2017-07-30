@@ -1,0 +1,15 @@
+.no-margin {
+  margin: 0;
+}
+
+$directions: (left, right, top, bottom);
+@each $direction in $directions {
+  .standard-margin-#{$direction} {
+    margin-#{$direction}: $global-margin;
+  }
+
+  .no-margin-#{$direction} {
+    margin-#{$direction}: 0 !important;
+  }
+}
+

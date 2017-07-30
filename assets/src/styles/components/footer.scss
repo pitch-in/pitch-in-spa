@@ -1,0 +1,44 @@
+html {
+  height: 100%;
+}
+
+body {
+  // Anchor for footer logo.
+  position: relative;
+  min-height: 100%;
+}
+
+footer {
+  $height: 5rem;
+  height: $height;
+
+  .floating-footer {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+
+    height: $height;
+    background: $blue;
+  }
+
+  .logo {
+    @include absolute-center;
+
+    $icon-height: 3.5rem;
+    height: $icon-height;
+    width: $icon-height;
+  }
+
+  .footer__problem-link {
+    position: absolute;
+    right: 1rem;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+  .footer__problem-icon {
+    $icon-height: 2rem;
+    height: $icon-height;
+    width: $icon-height;
+  }
+}

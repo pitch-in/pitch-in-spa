@@ -1,0 +1,12 @@
+body::before {
+  content: " ";
+  height: $navbar-height;
+  display: block;
+}
+
+// Don't show top bar, until js takes over to hide it.
+.no-js {
+  .navbar .top-bar.submenu {
+    display: none;
+  }
+}

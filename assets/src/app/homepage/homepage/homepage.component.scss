@@ -1,0 +1,115 @@
+@import 'variables/index';
+@import 'mixins/index';
+
+.parallax-slider,
+.home-background {
+  filter: blur(2px) brightness(0.85);
+  z-index: -1;
+}
+
+.home {
+  .home-section {
+    padding: 20px;
+    position: relative;
+    overflow: hidden;
+    background-image: linear-gradient(rgba($black, 0), rgba($black, 0.75) 75%);
+
+    .home-background {
+      $blur-border: -5px;
+
+      background-image: url('/assets/img/homepage/hero.jpg');
+      background-position: center top;
+      background-size: cover;
+
+      position: absolute;
+
+      top: $blur-border;
+      left: $blur-border;
+      bottom: $blur-border;
+      right: $blur-border;
+    }
+  }
+}
+
+.home__header {
+  color: $white;
+  @include text-shadow-dark;
+  // @include breakpoint(large) {
+  //   // Special bigger size text.
+  //   font-size: 3rem;
+  // }
+}
+
+.home__subhead {
+  @include text-shadow-dark;
+  color: $white;
+  font-family: $base-font-family;
+}
+
+.home-the-organizers {
+  @include image("/assets/img/homepage/the-organizers.jpg", 100%);
+}
+
+.call-to-action-footer {
+  background: $black;
+  padding: 0.5rem;
+  margin-bottom: 0.5rem;
+
+  &__header {
+    color: $white;
+    margin: 0;
+  }
+}
+
+.row.home__fill-row {
+  margin: -0.5rem;
+}
+
+.home__fill-block {
+  padding: 0.5rem;
+
+  &--teal {
+    background: $teal;
+  }
+}
+
+.home__block-header {
+  text-align: center;
+
+  &--white {
+    color: $white;
+  }
+}
+
+.home__callout {
+  font-size: 1.5rem;
+}
+
+.testimonial {
+  @include flex(row);
+  background: $blue;
+  padding: 0.5rem;
+
+  &__img {
+    height: 80%;
+    width: 200px;
+    flex-shrink: 0;
+  }
+
+  &__text,
+  &__header {
+    color: $white;
+  }
+
+  &__text {
+    flex-grow: 1;
+  }
+}
+
+.maceo-img {
+  @include image('/assets/img/homepage/maceo.jpg', 100%);
+  &::after {
+    border-radius: 50%;
+    background-position: center center;
+  }
+}
