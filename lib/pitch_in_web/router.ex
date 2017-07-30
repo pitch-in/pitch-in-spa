@@ -1,8 +1,17 @@
 defmodule PitchInWeb.Router do
   use PitchInWeb, :router
 
+  pipeline :browser do
+  end
+
   pipeline :api do
     plug :accepts, ["json"]
+  end
+
+  scope "/", PitchInWeb do
+    pipe_through :browser
+
+    get "/", StaticController, :app
   end
 
   scope "/api", PitchInWeb do
