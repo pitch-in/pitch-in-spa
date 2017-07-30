@@ -25,7 +25,7 @@ defmodule PitchIn.Mixfile do
   end
 
   # Specifies which paths to compile per environment.
-  defp elixirc_paths(:test), do: ["lib", "test/support"]
+  defp elixirc_paths(:test), do: ["lib", "test/support", "test/mocks"]
   defp elixirc_paths(_),     do: ["lib"]
 
   # Specifies your project dependencies.
@@ -38,7 +38,20 @@ defmodule PitchIn.Mixfile do
       {:phoenix_ecto, "~> 3.2"},
       {:postgrex, ">= 0.0.0"},
       {:gettext, "~> 0.11"},
-      {:cowboy, "~> 1.0"}
+      {:cowboy, "~> 1.0"},
+
+      {:timex, "~> 3.1.7"},
+      {:timex_ecto, "~> 3.1.1"},
+      {:ecto_enum, "~> 1.0"},
+      {:comeonin, "~> 3.0.0"},
+      {:bamboo, "~> 0.8"},
+      {:basic_auth, "~> 2.0"},
+      {:sentry, "~> 3.0.0"},
+      {:hackney, "~> 1.7.0", override: true},
+      {:httpoison, "~> 0.11.1"},
+      {:poison, "~> 2.0"},
+      {:credo, "~> 0.8.1", only: [:dev, :test], runtime: false},
+      {:ex_machina, "~> 2.0", only: :test}
     ]
   end
 
@@ -52,6 +65,8 @@ defmodule PitchIn.Mixfile do
     [
       "ecto.setup": ["ecto.create", "ecto.migrate", "run priv/repo/seeds.exs"],
       "ecto.reset": ["ecto.drop", "ecto.setup"],
+      "db.migrate": ["ecto.migrate", "ecto.dump"],
+      "db.rollback": ["ecto.rollback", "ecto.dump"],
       "test": ["ecto.create --quiet", "ecto.migrate", "test"]
     ]
   end
