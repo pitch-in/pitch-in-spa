@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { FormGroup, FormBuilder, Validators } from '@angular/forms';
 
-import { UserStream } from '../user.stream';
+import { UserStream } from 'app/accounts/user.stream';
 import { LoginStream } from '../login.stream';
 
 @Component({

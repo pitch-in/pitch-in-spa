@@ -40,6 +40,8 @@ defmodule PitchIn.Mixfile do
       {:gettext, "~> 0.11"},
       {:cowboy, "~> 1.0"},
 
+
+      {:corsica, "~> 1.0"},
       {:timex, "~> 3.1.7"},
       {:timex_ecto, "~> 3.1.1"},
       {:ecto_enum, "~> 1.0"},

@@ -7,3 +7,8 @@ export interface User {
 export interface Pro {
   phone: string;
 }
+
+export interface LoginCredentials {
+  email: string;
+  password: string;
+}

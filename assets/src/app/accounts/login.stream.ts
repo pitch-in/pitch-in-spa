@@ -1,5 +1,5 @@
 import { SubjectWrapper } from '../signals/signal.helper';
 
-import { User } from './accounts.model';
+import { LoginCredentials } from './accounts.model';
 
-export class LoginStream extends SubjectWrapper<User> {}
+export class LoginStream extends SubjectWrapper<LoginCredentials> {}

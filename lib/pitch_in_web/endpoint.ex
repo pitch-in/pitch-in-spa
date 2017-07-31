@@ -19,6 +19,14 @@ defmodule PitchInWeb.Endpoint do
   plug Plug.RequestId
   plug Plug.Logger
 
+  # CORS
+  # TODO: Dev only
+  plug Corsica,
+    origins: "http://localhost:4200",
+    allow_credentials: true,
+    allow_headers: ["Content-Type"],
+    log: [rejected: :info, invalid: :info, accepted: :info]
+
   plug Plug.Parsers,
     parsers: [:urlencoded, :multipart, :json],
     pass: ["*/*"],
